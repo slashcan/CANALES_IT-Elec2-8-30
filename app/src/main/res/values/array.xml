@@ -5,4 +5,11 @@
             <item>Voltes 5</item>
             <item>Optimus</item>
         </string-array>
+
+        <string-array name="array_technology">
+            <item>Android</item>
+            <item>Java</item>
+            <item>Php</item>
+            <item>Hadoop</item>
+        </string-array>
 </resources>
