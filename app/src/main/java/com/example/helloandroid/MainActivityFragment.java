@@ -19,7 +19,7 @@ public class MainActivityFragment extends AppCompatActivity {
         setContentView(R.layout.activity_main_fragment);
 
         firstFragment = (Button) findViewById(R.id.firstFragment);
-        //   secondFragment = (Button) findViewById(R.id.secondFragment);
+        secondFragment = (Button) findViewById(R.id.secondFragment);
 
         firstFragment.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,7 +44,5 @@ public class MainActivityFragment extends AppCompatActivity {
             fragmentTransaction.replace(R.id.frameLayout, fragment);
             fragmentTransaction.commit();
         }
-
-
 
 }
