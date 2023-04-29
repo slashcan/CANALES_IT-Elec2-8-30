@@ -23,10 +23,10 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public static final String COLUMN_AGE = "age";
 
     private static final String CREATE_TABLE =
-            "CREATE TABLE " + TABLE_NAME + " ( " +
-                    COLUMN_ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    COLUMN_NAME + "TEXT, " +
-                    COLUMN_AGE + "INTEGER);";
+            "CREATE TABLE " + TABLE_NAME + " (" +
+                    COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                    COLUMN_NAME + " TEXT, " +
+                    COLUMN_AGE + " INTEGER);";
 
     public MyDatabaseHelper(Context context)
     {
@@ -95,7 +95,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase db = getReadableDatabase();
         String[] projection = { COLUMN_ID, COLUMN_NAME, COLUMN_AGE};
-        String sortOrder = COLUMN_AGE + " ASC";
+        String sortOrder = COLUMN_NAME+ " ASC";
         Cursor cursor = db.query(TABLE_NAME, projection, null, null, null, null, sortOrder);
         return cursor;
     }
